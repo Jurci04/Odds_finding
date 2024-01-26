@@ -1,4 +1,4 @@
-from dataframes import create_dataframe
+from scrapper import football_matches_scrapping as fms
 from analyzing_functions import check_odd, best_odds
 
 import pandas as pd
@@ -12,18 +12,14 @@ while(True):
     except ValueError:
         print("Please enter a valid number!")
 
-#Creating the final dataframe
-final_df = create_dataframe()
 
-#Finding the average odds
+final_df = fms.dataframe_create()
+
 average_odds = final_df.melt().value.mean()
 
-#Finding the desired odds
 interesting_odds = final_df.map(lambda x: check_odd(x, odd_from, odd_to))
 
-#Finding the best odds
 best_odds = best_odds(final_df)
-
 
 
 #Printing the desired odds
