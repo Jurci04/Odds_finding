@@ -36,7 +36,7 @@ python main.py
 - Super Lig (Turkish)
 - Tipsport Liga (Czech)
 - Niké Liga (Slovak)
-- 
+  
 ### Usage
 Anyone can use and/or contribute to this project
 
