@@ -25,8 +25,8 @@ python main.py
 - UI
 - Optimalization
 
-### License
-This project is under the MIT License
+### Use
+Anyone can use and/or contribute to this project
 
 ### Author
 Juraj Štibrány
