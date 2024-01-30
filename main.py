@@ -8,10 +8,12 @@ while(True):
     try:
         odd_from = float(input("Enter the odds you want to show - from: "))
         odd_to = float(input("To: "))
-        break
+        if odd_from >= odd_to:
+            print("Please enter a valid range!")
+        else:
+            break
     except ValueError:
         print("Please enter a valid number!")
-
 
 final_df = fms.dataframe_create()
 
