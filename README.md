@@ -25,8 +25,20 @@ python main.py
 - UI
 - Optimalization
 
-### License
-This project is under the MIT License
+### Leagues so far:
+- Premier League
+- Bundesliga
+- La Liga
+- Seria A
+- Ligue 1
+- Eredivisie (Dutch)
+- Liga Portugal (Portugese)
+- Super Lig (Turkish)
+- Tipsport Liga (Czech)
+- Niké Liga (Slovak)
+  
+### Usage
+Anyone can use and/or contribute to this project
 
 ### Author
 Juraj Štibrány
