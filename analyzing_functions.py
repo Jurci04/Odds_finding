@@ -18,6 +18,6 @@ def check_odd(val, odd_from, odd_to):
 #  @param dataframe the dataframe to be checked
 #  @return concatenated dataframe of the best odds
 def best_odds(dataframe):
-    best_odds_1 = dataframe["1"].map(lambda val: check_odd(val, 1.66, 1.81))
-    best_odds_1X = dataframe["1X"].map(lambda val: check_odd(val, 1.66, 1.81))
+    best_odds_1 = dataframe["1"].map(lambda val: check_odd(val, 1.66, 1.73))
+    best_odds_1X = dataframe["1X"].map(lambda val: check_odd(val, 1.66, 1.78))
     return pd.concat([best_odds_1, best_odds_1X], axis=1)

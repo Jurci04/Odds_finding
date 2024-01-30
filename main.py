@@ -15,9 +15,9 @@ while(True):
     except ValueError:
         print("Please enter a valid number!")
 
-final_df = fms.dataframe_create()
+final_df = fms.create_dataframe()
 
-average_odds = final_df.melt().value.mean()
+average_odds = final_df.mean().mean()
 
 interesting_odds = final_df.map(lambda x: check_odd(x, odd_from, odd_to))
 
