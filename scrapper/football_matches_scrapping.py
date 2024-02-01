@@ -9,6 +9,7 @@ import pandas as pd
 #URLS for different sites:
 url_tipsport = "https://www.tipsport.cz/kurzy/fotbal/fotbal-muzi--1?limit=525"
 
+words_to_exclude = {"2023/2024", "celkově", "speciál"}
 ## @brief scraping data from tipsport.cz
 # The function gets the match ID from the website and based on that it gets the odds for the match
 #  @param driver webdriver set up in the function scrape_league
@@ -18,7 +19,7 @@ def scrape_data(driver):
     match_ids = []
     odds = []
     for match in driver.find_elements(By.CSS_SELECTOR, "span.o-matchRow__matchName > span"):
-        if match.text != "" and "2023/2024" not in match.text and "celkově" not in match.text and "speciál" not in match.text:
+        if match.text != "" and not any(word in match.text for word in words_to_exclude):
             matches_played.append(match.text)
             match_id = match.get_attribute("data-m")
             match_ids.append(match_id)
